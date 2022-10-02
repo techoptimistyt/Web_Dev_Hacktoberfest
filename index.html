@@ -1,157 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<title>Hello Sir</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box;
-}
-
-/* Style the body */
-body {
-  font-family: Georgia;
-  margin: 0;
-}
-
-/* Header/logo Title */
-.header {
-  padding: 80px;
-  text-align: center;
-  background: #1abc9c;
-  color: white;
-}
-
-/* Increase the font size of the heading */
-.header h1 {
-  font-size: 40px;
-}
-
-/* Style the top navigation bar */
-.navbar {
-  overflow: hidden;
-  background-color: #333;
-}
-
-/* Style the navigation bar links */
-.navbar a {
-  float: left;
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 20px;
-  text-decoration: none;
-}
-
-/* Right-aligned link */
-.navbar a.right {
-  float: right;
-}
-
-/* Change color on hover */
-.navbar a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* Column container */
-.row {  
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
-  flex-wrap: wrap;
-}
-
-/* Create two unequal columns that sits next to each other */
-/* Sidebar/left column */
-.side {
-  -ms-flex: 30%; /* IE10 */
-  flex: 30%;
-  background-color: #f1f1f1;
-  padding: 20px;
-}
-
-/* Main column */
-.main {   
-  -ms-flex: 70%; /* IE10 */
-  flex: 70%;
-  background-color: white;
-  padding: 20px;
-}
-
-/* Fake image, just for this example */
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
-}
-
-/* Footer */
-.footer {
-  padding: 20px;
-  text-align: center;
-  background: #ddd;
-}
-
-/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 700px) {
-  .row {   
-    flex-direction: column;
-  }
-}
-
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {
-  .navbar a {
-    float: none;
-    width: 100%;
-  }
-}
-</style>
+  <title>Hello Sir</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
 </head>
+<style>
+  .imgbox {
+    box-shadow: 0px 0px 10px 5px grey
+  }
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 600px;
+    margin: auto;
+    text-align: center;
+  }
+
+  .title {
+    color: grey;
+    font-size: 18px;
+  }
+
+  button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+  }
+
+  button:hover,
+  a:hover {
+    opacity: 0.7;
+  }
+
+  .content {
+    width: 300px;
+    height: 300px;
+    /* border: 2px solid red */
+  }
+
+  .card {
+    display: flex;
+  }
+
+  .imgpic {
+    height: 300px;
+    /* border: 2px solid black; */
+    width: 300px
+  }
+
+  .imgstyle {
+    width: 100%;
+    height: 100%
+  }
+
+  .textstyle {
+    height: 50px;
+    margin-top: 20px;
+    font-size: 20px;
+    /* border: 2px solid red; */
+    margin-top: 40px;
+  }
+
+  .textimg {
+    background-image: url('Images/city.jpg');
+    height: 120px;
+    font-size: 50px;
+    text-align: center;
+    font-family: fantasy;
+    line-height: 120px;
+  }
+
+  .textimg2 {
+    background-image: url('Images/mountains.JPG');
+    height: 120px;
+    font-size: 50px;
+    text-align: center;
+    font-family: fantasy;
+    line-height: 120px;
+  }
+
+  .textimg3 {
+    background-image: url('Images/beach.jpg');
+    height: 120px;
+    font-size: 50px;
+    text-align: center;
+    font-family: fantasy;
+    line-height: 120px;
+  }
+
+
+
+  .traveltext {
+    /* border: 2px solid green; */
+    margin-top: 150px;
+    font-size: 25px;
+  }
+
+  @media screen and (max-width: 600px) {
+    .card {
+      display: block;
+      width: 300px
+    }
+  }
+</style>
+
 <body>
 
-<div class="header">
-  <h1>Tech Optimist</h1>
-  <p>Coding Geek</p>
-</div>
-
-<div class="navbar">
-  <a href="#">Home</a>
-  <a href="#">About</a>
-  <a href="#">Contact</a>
-  <a href="#" class="right">Login</a>
-</div>
-
-<div class="row">
-  <div class="side">
-    <h2>About Tech Optimist</h2>
-    <h5>Logo:</h5>
-    <div class="fakeimg" style="height:200px;">Image</div>
-    <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-    <h3>More Text</h3>
-    <p>Lorem ipsum dolor sit ame.</p>
-    <div class="fakeimg" style="height:60px;">Image</div><br>
-    <div class="fakeimg" style="height:60px;">Image</div><br>
-    <div class="fakeimg" style="height:60px;">Image</div>
+  <div class="header">
+    <h1>TRAVEL OPTIMIST</h1>
+    <p>Travelling Geek</p>
   </div>
-  <div class="main">
-    <h2>WELCOME TO MY WEBSITE</h2>
-    <div class="fakeimg" style="height:200px;">Image</div>
-    <p>Some text..</p>
-    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-    <br>
-    <h2>ABOUT ME</h2>
-    <div class="fakeimg" style="height:200px;">Image</div>
-    <p>Some text..</p>
-    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+
+  <div class="navbar">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+    <a href="#" class="right">Login</a>
   </div>
-</div>
 
-<div class="footer">
-  <h2>Footer</h2>
-</div>
+  <div class="row">
+    <div class="side">
+      <h2>About Travel Optimist</h2>
+      <div class="fakeimg" style="height:200px;">
+        <div class="travelbox">
+          <img src="Images/travel.JPG" width="100%">
+        </div>
+      </div>
+      <p class="traveltext">Some text about me in culpa qui officia deserunt mollit anim..</p>
+      <h3>T R A V E L P L A C E S</h3>
+      <div class="fakeimg">
+        <!-- <img class="imgstyle" src="Images/city.jpg"> -->
+        <div class="textimg">C I T Y</div>
+      </div><br>
+      <div class="fakeimg">
+        <!-- <img class="imgstyle" src="Images/city.jpg"> -->
+        <div class="textimg2">M O U N T A I N S</div>
+      </div><br>
+      <div class="fakeimg">
+        <!-- <img class="imgstyle" src="Images/city.jpg"> -->
+        <div class="textimg3">B E A C H E S</div>
+      </div><br>
+    </div>
+    <div class="main">
 
+      <h1>TRAVEL DIARIES</h1>
+      <div class="imgbox">
+        <img src="Images/collage.jpg" width="100%">
+      </div>
+      <p style="font-size:larger">I’ve gone from weekend traveller, to solo digital nomad, to owning a home in sunny
+        Southsea, UK – holidaying
+        when I can. I want to use my travel experience to help you plan your trips, and introduce you to some new and
+        special spots I’ve loved around the world. Expect adventure, road trips, camping, festivals and food! </p>
+
+      <br>
+      <h2>ABOUT ME</h2>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+      <div class="card">
+        <div class="imgpic">
+          <img src="images/profile.jpg" alt="John" style="width:100%">
+        </div>
+        <div class="content">
+          <h1>MR BEAN</h1>
+          <p class="title">TRAVELLING GEEK</p>
+          <p class="textstyle">Harvard University</p>
+          <a href="#"><i class="fa fa-dribbble"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-linkedin"></i></a>
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <p><button>Contact</button></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <h2>Footer</h2>
+  </div>
+  <script>
+    conso
+  </script>
 </body>
+
 </html>
